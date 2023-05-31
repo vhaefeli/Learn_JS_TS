@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+@font-face {
+	font-family: "Caveat";
+	src: url(./assets/fonts/Caveat/Caveat-VariableFont_wght.ttf);
+}
+
+/* l-etoile donne su syle a TOUS les elements. si on met 0 ca permets d-effacer les valeur
+par defaut pour pouvoir toujours appliquer les notres. exemple:
+* {
+	margin: 0;
+	padding:0;
+	border: 2px red;
+ }
+  */
+/* pour changer la couleur d-un element standard par exemple les placeholder */
+::placeholder {
+	color: rgb(65, 43, 28);
+}
+body {
+	font-family: "Caveat";
+	background: url(./assets/img/bg.jpg) center/cover;
+	/* VH = 100% de la taille de l-ecran de l-utilisateur viewport height */
+	min-height: 100vh;
+	color: rgb(181, 120, 76);
+}
+h1 {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	/* tac = */
+	text-align: center;
+	/* les taille de police doivent etre en rem 1rem = 16px h1 standard = 2rem */
+	font-size: 2.5rem;
+	/* si on met une taille de texte en vm, cela fait une taille qui se modifie en 
+	fonction de la taille de la fenetre viewport width */
+	/* une ombre a generalement une opacite de 25% */
+	text-shadow: 9px 6px 5px rgba(181, 120, 76, 0.495);
+	color: rgb(181, 120, 76);
+	/* google fonts */
+	font-family: "Pangolin" , Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main{
+	min-height: 300px;
+	width: 90%;
+	background: rgba(181, 120, 76, 0.138);
+	/* centrer la boite > 2 valeur = (haut/bas) (droite/gauche)*/
+	margin: 0 auto;
+	border: 3px solid rgb(181, 120, 76);
+	border-radius: 20px;
+	box-shadow: 0px 0px 20px 4px rgba(181, 120, 76, 0.495);
+/* padding = marges interne a la box */
+	padding: 15px;
+}
+
+h2 {
+	margin: 0;
+}
+
+.flexbox, .grid, .absolute {
+	border: 2px solid burlywood;
+	border-radius: 10px;
+	padding: 10px;
+	margin-top: 20px;
+	min-height: 150px;
+}
+
+/* FLEXBOX */
+/* Sert a repartir equitablement des elements sur la  page*/
+.flexbox ul {
+	padding: 0;
+	display: flex;
+	/* dans chrome dans l-inspecteur a cote de display:flex il z a une petite icone qui
+	nous donne acces a la mise en place des boxes et donne le bon code par exemple: */
+	justify-content: space-evenly;
+}
+
+.flexbox li {
+	list-style: none;
+	/* h160 et w160 donne> */
+	height: 160px;
+	width: 160px;
+	margin: 10px;
+	background: rgba(128, 128, 128, 0.178);
+	/* centrer un unique element verticalement et horizontalement */
+	display: flex;
+	/* jcc */
+	justify-content: center;
+	/* aic */
+	align-items: center;
+}
+
+/* GRID */
+.grid-container {
+	display: grid;
+	grid-template-columns: 30% 70%;
+}
+.grid img {
+	width: 90%;
+	margin-top: 5px;
+	margin: 20px auto;
+	display: block;
+
+}
+
+form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas: 
+	/* i input ta text area em empty bt bouton */
+		"i1 i2"
+		"ta ta"
+		"em bt";
+}
+
+input, textarea {
+	margin: 5px;
+	background: rgba(128, 128, 128, 0.751);
+	border: 1px solid black;
+	bor
+	padding: 10px;
+	font-size: 1.1 rem;
+	font-family: "Pangolin" , Verdana, Geneva, Tahoma, sans-serif;
+	color: rgb(181, 120, 76);
+	border-radius: 5px;
+}
+textarea {
+	grid-area: ta;
+	height: 40px;
+	resize: none;
+}
+
+/* comme on utilise . pour une classe on utilise # pour un id */
+#btn-submit {
+	grid-area: bt;
+	cursor: pointer;
+	background: burlywood;
+	transition: 0.2s;
+}
+
+#btn-submit:hover {
+	background: rgb(149, 124, 90);
+	color: rgb(65, 43, 28);
+
+}
+
+/* ABSOLUTE */
+/* il faut mettre une position relative au parent pour contraindre 
+l-element en absolute dans ses frontieres sinon l-objet se positionne relativement au body*/
+.absolute{
+	position: relative;
+}
+#circle1 {
+	height: 60px;
+	width: 60px;
+	background: rgb(212 166 131);
+	position: absolute;
+	border-radius: 150px;
+	top: 0;
+	right: 0;
+}
+
+#circle2 {
+	height: 40px;
+	width: 40px;
+	background: rgb(117, 97, 81);
+	position: absolute;
+	border-radius: 150px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 585px) {
+	.grid-container {
+		display: block;
+	}
+	.grid-container img {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 430px) {
+	.flexbox ul {
+		flex-direction: column;
+		align-items: center;
+	}
+	form {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		grid-template-areas: 
+			"i1"
+			"i2"
+			"ta"
+			"bt";
+	}
+	input, textarea {
+		font-size: 0.8rem;
+	}
+}

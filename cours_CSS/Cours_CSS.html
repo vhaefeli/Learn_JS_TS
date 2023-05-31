@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cours CSS</title>
+<!-- lier le fichier css -->
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>les bases de CSS</h1>
+	</header>
+	<main>
+		<!-- en ecrivant .flexbox ca ecrit directement: -->
+		<div class="flexbox">
+			<h2>flexbox</h2>
+			<ul>
+				<li>boite 1</li>
+				<li>boite 2</li>
+				<li>boite 3</li>
+			</ul>
+		</div>
+		<div class="grid">
+			<h2>Grid</h2>
+			<div class="grid-container">
+				<img src="./assets/img/mouse.jpg" alt="little mouse">
+
+				<form action="">
+					<input type="text" id="firstname" placeholder="Firstname">
+					<input type="text" id="surname" placeholder="Surname">
+					<textarea cols="30" rows="10" placeholder="Your message"></textarea>
+					<input type="submit" id="btn-submit" value="Submit"/>
+				</form>
+			</div>
+		</div>
+		<div class="absolute">
+			<h2>Absolute</h2>
+			<span id="circle1"></span>
+			<!-- equivalent a span#circle2 -->
+			<span id="circle2"></span>
+		</div>
+	</main>
+</body>
+</html>
