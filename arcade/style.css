@@ -55,7 +55,7 @@ body {
 	width: 10vw;
 	position: absolute;
 	transition: 0.2s;
-	/* top: 37vw; in the js defined*/
+	top: 37vw;
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 3;
