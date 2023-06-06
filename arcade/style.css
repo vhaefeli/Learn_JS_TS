@@ -1,0 +1,67 @@
+@font-face {
+	font-family: "Orbitron";
+	src: url(./assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf);
+}
+
+body {
+	background: rgb(164, 164, 164);
+	margin: 5vw;
+	max-height: 20vh;
+	font-family: Orbitron, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.flexbox, .grid, .absolute {
+	border-top: 2px solid white;
+	border-left: 2px solid white;
+	border-right: 2px solid #5C14D0;
+	border-bottom: 2px solid #5C14D0;
+	text-align: center;
+	margin-top: 50vh;
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+	transform: translateY(-50%);
+	max-height: 48.4vw ;
+}
+
+.absolute {
+	position: relative;
+	color: white;
+}
+
+#arcade{
+	width: 86vw;
+}
+
+#game{
+	width: 20vw;
+	position: absolute;
+	top: 22vw;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#slot{
+	height: 6.2vw;
+	position: absolute;
+	top: 44.1313vw;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#coin{
+	width: 10vw;
+	position: absolute;
+	transition: 0.2s;
+	top: 37vw;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#insert{
+	width: 12vw;
+	position: absolute;
+	font-size: 2vw;
+	top: 25vw;
+	left: 50%;
+	transform: translateX(-50%);
+}
