@@ -30,6 +30,7 @@ body {
 
 #arcade{
 	width: 86vw;
+
 }
 
 #game{
@@ -38,23 +39,26 @@ body {
 	top: 22vw;
 	left: 50%;
 	transform: translateX(-50%);
+	z-index: 1;
 }
 
 #slot{
-	height: 6.2vw;
+	height: 6vw;
 	position: absolute;
-	top: 44.1313vw;
+	top: 44.34364vw;
 	left: 50%;
 	transform: translateX(-50%);
+	z-index: 4;
 }
 
 #coin{
 	width: 10vw;
 	position: absolute;
 	transition: 0.2s;
-	top: 37vw;
+	/* top: 37vw; in the js defined*/
 	left: 50%;
 	transform: translateX(-50%);
+	z-index: 3;
 }
 
 #insert{
@@ -64,4 +68,5 @@ body {
 	top: 25vw;
 	left: 50%;
 	transform: translateX(-50%);
+	z-index: 2;
 }
